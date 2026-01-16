@@ -31,7 +31,7 @@ claude .
 Create all files in ./output/ directory (or your preferred location).
 Validate each phase before proceeding to next.
 Generate all templates with complete content (not placeholders).
-Test the system with QuickRephrase example at the end.
+Test the system with ReceiptRally example at the end.
 Report when complete."
 ```
 
@@ -59,7 +59,7 @@ ralph-search/   # (or your chosen output directory)
 │   ├── pricing-validator.md
 │   └── gtm-validator.md
 ├── projects/
-│   └── quickrephrase/          # Complete example
+│   └── receiptrally/          # Complete example
 └── docs/                        # Usage guides
 ```
 
@@ -68,10 +68,10 @@ ralph-search/   # (or your chosen output directory)
 Once built, try the example:
 ```bash
 cd ralph-search  # or your output directory
-./orchestrator.sh projects/quickrephrase
+./orchestrator.sh projects/receiptrally
 ```
 
-This will execute full market research on the QuickRephrase example (2-15 hours).
+This will execute full market research on the ReceiptRally example (2-15 hours).
 
 ## 📖 Using for Your Own Apps
 

@@ -85,7 +85,7 @@ Execute all 7 phases sequentially:
 2. Create all templates with FULL content (not placeholders)
 3. Create all validator agents with rigorous criteria
 4. Create orchestrator.sh script (make it executable)
-5. Create QuickRephrase example project
+5. Create ReceiptRally example project
 6. Create all documentation
 7. Test the system end-to-end
 
@@ -114,7 +114,7 @@ echo ""
 echo "Next steps:"
 echo "  1. cd $OUTPUT_DIR"
 echo "  2. Read README.md for usage instructions"
-echo "  3. Try the example: ./orchestrator.sh projects/quickrephrase"
+echo "  3. Try the example: ./orchestrator.sh projects/receiptrally"
 echo ""
 echo "To research your own app:"
 echo "  1. cp templates/project-intake-form.md projects/my-app/intake.md"

@@ -7,9 +7,9 @@ Build a Ralph-style autonomous research system that executes market validation f
 - [ ] Complete folder structure with all templates
 - [ ] Working orchestrator.sh that loops through phases
 - [ ] All 6 research phases defined with validation criteria
-- [ ] Example project (QuickRephrase) fully configured
+- [ ] Example project (ReceiptRally) fully configured
 - [ ] Documentation for how to use the system
-- [ ] Can be executed with: `./orchestrator.sh projects/quickrephrase`
+- [ ] Can be executed with: `./orchestrator.sh projects/receiptrally`
 
 ## Technology Stack
 - Bash scripts for orchestration
@@ -27,7 +27,7 @@ Build a Ralph-style autonomous research system that executes market validation f
 - [ ] 1.2: Create templates folder with all template files
 - [ ] 1.3: Create agents folder (for validator agents)
 - [ ] 1.4: Create tools folder (for helper scripts)
-- [ ] 1.5: Create example project folder (quickrephrase)
+- [ ] 1.5: Create example project folder (receiptrally)
 - [ ] 1.6: Create config folder with examples
 
 ### File Structure to Create
@@ -52,7 +52,7 @@ ralph-search/
 │   ├── competitor-finder.sh
 │   └── validation-checker.sh
 ├── projects/
-│   └── quickrephrase/
+│   └── receiptrally/
 │       ├── intake.md
 │       ├── research-prd.md
 │       ├── checkpoints/
@@ -97,7 +97,7 @@ ralph-search/
 ## The Problem (in your words)
 [Describe the problem you're solving. Be specific about frustrations.]
 
-Example: "I constantly need to rephrase text (emails, messages, content) but I hate opening ChatGPT in a new tab, copy-pasting back and forth, losing my flow, and wasting 2-3 minutes every time."
+Example: "I spend 2-4 hours every month hunting down receipts across email and Downloads, renaming files, and entering totals for taxes. I still miss deductions."
 
 ## Target Avatar (your hypothesis)
 **Who**: [Specific type of person - be narrow, not "everyone"]
@@ -109,7 +109,7 @@ Example: "I constantly need to rephrase text (emails, messages, content) but I h
 **What makes you different**: [Your unique mechanism]
 **Why this matters**: [Why the difference is valuable, not just a feature]
 
-Example: "AI-powered text transformation at point of writing (context menu or keyboard shortcut), no app switching required. This matters because existing tools require leaving your workflow."
+Example: "Local-first receipt capture that automatically finds receipts in email/Downloads, runs OCR on-device, and exports a clean CSV in one click. This matters because existing tools are either heavy accounting suites or subscription scanners."
 
 ## Initial Assumptions (we'll validate these)
 - **Market size**: [Your TAM estimate - e.g., $50-100M for Mac productivity tools]
@@ -1265,126 +1265,121 @@ chmod +x orchestrator.sh
 
 ---
 
-## PHASE 5: Create Example Project (QuickRephrase)
+## PHASE 5: Create Example Project (ReceiptRally)
 
-### Task 5.1: Create intake.md for QuickRephrase
+### Task 5.1: Create intake.md for ReceiptRally
 
-**File location**: `projects/quickrephrase/intake.md`
+**File location**: `projects/receiptrally/intake.md`
 
 **Full contents**:
 ```markdown
-# Market Research Intake: QuickRephrase
+# Market Research Intake: ReceiptRally
 
 ## Basic Info
-**App Name**: QuickRephrase
-**One-Line Description**: Instant AI text transformation without leaving your current app
+**App Name**: ReceiptRally
+**One-Line Description**: Auto-capture and categorize business receipts so freelancers can export expenses in minutes
 **Your Role**: Founder & Developer
 **Date**: 2026-01-14
 
 ## The Problem (in your words)
-I constantly need to rephrase text when writing emails, Slack messages, tweets, and content. The current workflow is terrible:
+I lose time and money every month chasing receipts. They land in email, screenshots, PDF downloads, and random folders. When it is time to reconcile expenses, I:
 
-1. Write something that sounds wrong (too formal, too casual, too long)
-2. Realize I need to fix it
-3. Open a new tab
-4. Go to ChatGPT
-5. Copy the text
-6. Paste into ChatGPT
-7. Wait for response
-8. Copy the result
-9. Go back to original tab
-10. Paste the rewritten text
-11. Format it to match
-12. Continue writing
+1. Search Gmail for "receipt" and "invoice"
+2. Dig through Downloads and Desktop folders
+3. Rename files manually
+4. Enter totals into a spreadsheet
+5. Guess categories later
+6. Realize some receipts are missing
+7. Repeat the process again at tax time
 
-This takes 2-3 minutes EVERY time and breaks my flow completely. I do this 5-10 times per day, which means I waste 10-30 minutes daily just switching between apps.
-
-The exact phrase I say to myself: "Ugh, this sounds like a robot wrote it" or "I need to make this more casual" or "This is way too long."
+This takes 2-4 hours per month and I still miss deductions. The exact phrase I say to myself: "Where did that receipt go?"
 
 ## Target Avatar (your hypothesis)
-**Who**: Mac users who write content daily - specifically developers, founders, content creators, and marketers who care about how their writing sounds
+**Who**: Freelancers, consultants, and small agencies on Mac who manage their own bookkeeping
 
-**Where they are**: 
-- r/productivity (3M members)
-- r/MacApps (185K members)
-- r/SideProject (220K members)
-- Twitter #MacProductivity
+**Where they are**:
+- r/freelance
+- r/smallbusiness
+- r/accounting
+- r/Entrepreneur
 - Indie Hackers
-- Product Hunt
+- QuickBooks community forums
+- Twitter/X #freelance
 
-**What they currently use**: 
-- ChatGPT (manual tab switching)
-- TextExpander (but no AI - just static snippets)
-- Grammarly (grammar only, not rephrasing)
-- Alfred workflows (clunky, not AI-powered)
+**What they currently use**:
+- Expensify or Dext (subscription fatigue)
+- QuickBooks or FreshBooks (overkill)
+- Spreadsheets + Google Drive
+- Apple Notes or Photos for receipts
+- Shoeboxed (mail-in scanning)
 
-**Why they'd care**: 
-- Saves 10-30 min/day (worth $25-75/day at $150/hr rate)
-- Keeps them in flow (no tab switching)
-- Makes writing feel effortless
-- Looks professional without effort
+**Why they'd care**:
+- Saves 2-4 hours every month
+- Reduces missed deductions and audit stress
+- Keeps data private (local-first)
+- Feels lightweight compared to full accounting suites
 
 ## Your Unique Approach
-**What makes you different**: AI-powered text transformation at the exact point of writing. Select text → right-click (or keyboard shortcut) → instant transformation. No app switching, no copy-paste, no waiting.
+**What makes you different**: A lightweight macOS menu bar app that automatically finds receipts in email and Downloads, runs OCR locally, and exports a clean CSV or QuickBooks file in one click.
 
-**Why this matters**: 
-1. Speed: 5 seconds vs. 2 minutes (24x faster)
-2. Flow: Stay in current app vs. context switching
-3. Simplicity: One action vs. 11-step workflow
-4. Integration: Works everywhere (Gmail, Slack, Notion, any text field)
+**Why this matters**:
+1. Speed: 10 minutes to reconcile vs. 2-4 hours manual
+2. Privacy: local-first, no cloud uploads required
+3. Simplicity: no accounting setup, just receipts
+4. Coverage: captures receipts people forget (email, PDFs, screenshots)
 
 Current solutions are either:
-- AI-powered but require app switching (ChatGPT)
-- Integrated but not AI (TextExpander, Alfred)
-- Grammar-focused not rewriting (Grammarly)
+- Full accounting suites (too heavy)
+- Subscription receipt scanners (too expensive)
+- Manual spreadsheet workflows (too slow)
 
-We're the ONLY solution that's both AI-powered AND integrated at point of writing.
+We're the ONLY option that is local-first, lightweight, and built for freelancers who want receipts handled fast.
 
 ## Initial Assumptions (we'll validate these)
-- **Market size**: $50-100M TAM (Mac productivity tools market)
-- **Willingness to pay**: $29-$47 one-time purchase (comparable to PopClip $15, Alfred Powerpack $34)
-- **Competitive advantage**: 10x faster workflow, first-mover in "AI at point of writing"
-- **Time to build MVP**: 2 weeks (macOS app with context menu + keyboard shortcut + 5 transform types)
-- **Path to first 100 customers**: Reddit posts (r/MacApps, r/productivity), Product Hunt launch, Twitter demo threads
+- **Market size**: $100-200M TAM (freelancers + small agencies doing their own bookkeeping)
+- **Willingness to pay**: $39-$69 one-time purchase (utility app pricing)
+- **Competitive advantage**: local-first + auto-capture from email/Downloads
+- **Time to build MVP**: 3-4 weeks (macOS app with OCR + export)
+- **Path to first 100 customers**: Indie Hackers, r/freelance posts, tax-season content
 
 ## Research Priorities (what you most want to know)
-1. **Is the "flow breaking" pain real for others or just me?** Do other people hate the ChatGPT tab-switching workflow?
-2. **How much would they actually pay?** Is $47 too high? Would they prefer $19? Subscription vs. one-time?
-3. **Will TextExpander/Alfred/competitors add AI soon?** Are we in a race? Do we have 6 months or 6 weeks before they catch up?
-4. **Can I reach enough people organically?** Or will I need paid ads (which would kill economics)?
+1. **Is the receipt chaos pain real for freelancers?** Or do most people just tolerate it?
+2. **Will they pay for a lightweight tool vs. a full accounting suite?**
+3. **Do they care about local-first privacy?** Or is cloud acceptable?
+4. **Which integrations matter most?** (CSV, QuickBooks, FreshBooks, Wave)
 
 ## Constraints
 **Time budget**: 15 hours max for research
 **Money budget**: $50 max (API/scraping tools)
 **Launch timeline**: Want to decide GO/NO-GO within 1 week (by Jan 21, 2026)
-**Risk tolerance**: Medium - willing to spend 2 weeks building if research is positive, but not 2 months if it's unclear
+**Risk tolerance**: Medium - willing to build a 3-4 week MVP if research is positive
 
 ## What success looks like
 After research, I want to know:
 - [ ] Clear answer: should I build this? (GO/NO-GO with confidence score)
-- [ ] If GO: what's the exact positioning, pricing ($29 vs $47?), and launch strategy?
-- [ ] If NO-GO: why not and what should I pivot to? (Maybe different avatar? Different problem?)
+- [ ] If GO: what is the exact positioning, pricing ($39 vs $69?), and launch strategy?
+- [ ] If NO-GO: why not and what should I pivot to? (Maybe different avatar or integration?)
 
 ---
 
 ## Notes for Research System
-- Focus on Mac users initially (Windows version can be Phase 2)
-- Don't research mobile (not relevant for this workflow)
-- Pay special attention to competitor timing (threat of incumbents adding AI)
-- I'm the avatar myself (can self-interview), but need external validation from 5-10 others
+- Focus on freelancers and small agencies first
+- Keep scope to macOS, not enterprise
+- Pay attention to tax season timing and launch windows
+- I am the avatar, but need external validation from 5-10 others
 ```
 
 ### Task 5.2: Generate research-prd.md from intake
 
 Use Claude Code to generate this automatically:
 ```bash
-claude projects/quickrephrase <<EOF
+claude projects/receiptrally <<EOF
 Read intake.md.
 Read ../../templates/research-prd-template.md.
 Generate a customized research-prd.md by:
 1. Replacing all {{VARIABLES}} with data from intake.md
 2. Keeping all phase structures intact
-3. Customizing research tasks based on the specific app (QuickRephrase)
+3. Customizing research tasks based on the specific app (ReceiptRally)
 4. Save to research-prd.md
 EOF
 ```
@@ -1392,14 +1387,14 @@ EOF
 ### Task 5.3: Create folder structure
 
 ```bash
-cd projects/quickrephrase
+cd projects/receiptrally
 mkdir -p checkpoints
 mkdir -p research/{phase1,phase2,phase3,phase4,phase5}
 mkdir -p deliverables
 ```
 
 ### Validation
-- [ ] QuickRephrase intake.md is complete and realistic
+- [ ] ReceiptRally intake.md is complete and realistic
 - [ ] Research PRD generated from template
 - [ ] All subdirectories created
 - [ ] Project is ready for orchestrator execution
@@ -1490,7 +1485,7 @@ Edit `config/research-config.json`:
 
 ## 📚 Examples
 
-See `projects/quickrephrase/` for a complete worked example.
+See `projects/receiptrally/` for a complete worked example.
 
 ---
 
@@ -1710,11 +1705,11 @@ Brief version:
 
 ## PHASE 7: Test the System
 
-### Task 7.1: Dry run with QuickRephrase
+### Task 7.1: Dry run with ReceiptRally
 
 Execute the full research loop:
 ```bash
-./orchestrator.sh projects/quickrephrase
+./orchestrator.sh projects/receiptrally
 ```
 
 ### Task 7.2: Validate outputs
@@ -1757,10 +1752,10 @@ After all 7 phases complete, verify:
 - [ ] ✅ Four validator agents with rigorous criteria
 - [ ] ✅ Working orchestrator.sh script with error handling
 - [ ] ✅ Helper tools created (even if simple)
-- [ ] ✅ Fully worked QuickRephrase example
+- [ ] ✅ Fully worked ReceiptRally example
 - [ ] ✅ Complete documentation (README, USAGE, PHASE-GUIDE)
 - [ ] ✅ Tested end-to-end with realistic data
-- [ ] ✅ Can execute: `./orchestrator.sh projects/quickrephrase`
+- [ ] ✅ Can execute: `./orchestrator.sh projects/receiptrally`
 - [ ] ✅ Produces valid GO/NO-GO decision with reasoning
 
 ---
@@ -1769,8 +1764,8 @@ After all 7 phases complete, verify:
 
 **Can you run this command and get a useful answer?**
 ```bash
-./orchestrator.sh projects/quickrephrase && \
-cat projects/quickrephrase/deliverables/GO-NO-GO-DECISION.md
+./orchestrator.sh projects/receiptrally && \
+cat projects/receiptrally/deliverables/GO-NO-GO-DECISION.md
 ```
 
 **If YES**: ✅ Mission accomplished!
@@ -1794,7 +1789,7 @@ You're building a system that will use you (Claude Code) to do research. Meta!
 - Orchestrator.sh is the most complex piece (Phase 4)
 - Validator agents need to be truly rigorous (Phase 3)
 - Templates must be complete with examples (Phase 2)
-- QuickRephrase example proves it works (Phase 5)
+- ReceiptRally example proves it works (Phase 5)
 
 **When you're done**:
 The user should be able to:

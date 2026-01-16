@@ -15,7 +15,7 @@ This file guides Claude Code when working in the Ralph Search project.
 When a user says they have a **new idea to research** (or similar), follow this workflow:
 
 ### Step 1: Get the Project Name
-Ask: "What should we call this project? Give me a short name (no spaces, use dashes). For example: `quick-rephrase`, `habit-tracker`, `invoice-tool`"
+Ask: "What should we call this project? Give me a short name (no spaces, use dashes). For example: `receipt-rally`, `habit-tracker`, `invoice-tool`"
 
 ### Step 2: Create the Project Folder
 ```bash
@@ -165,12 +165,12 @@ cat projects/[project]/deliverables/GO-NO-GO-DECISION.md
 ### "Edit the intake for [project]"
 Open and help them modify `projects/[project]/intake.md`, then regenerate research-prd.md.
 
-### "Run the QuickRephrase example"
+### "Run the ReceiptRally example"
 Tell them:
 ```
 To run the included example, open Terminal and run:
   cd ralph-search
-  ./orchestrator.sh projects/quickrephrase
+  ./orchestrator.sh projects/receiptrally
 ```
 
 ---
@@ -181,7 +181,7 @@ To run the included example, open Terminal and run:
 
 2. **Interview conversationally** - Don't dump all questions at once. Ask one, wait for answer, acknowledge it, then ask the next.
 
-3. **Be helpful with examples** - If they seem stuck on a question, give examples from the QuickRephrase project.
+3. **Be helpful with examples** - If they seem stuck on a question, give examples from the ReceiptRally project.
 
 4. **Validate their answers** - If something seems too broad ("everyone is my target"), push back gently and ask them to narrow it.
 
@@ -201,7 +201,7 @@ ralph-search/
 ├── docs/                  # Documentation
 ├── config/                # Settings
 └── projects/              # Research projects
-    ├── quickrephrase/     # Example project
+    ├── receiptrally/     # Example project
     └── [your-projects]/   # User projects go here
 ```
 

@@ -189,7 +189,7 @@ A VALID quote must:
 - [ ] Include context (where it was posted, when)
 
 Example of GOOD quote:
-> "I literally want to throw my laptop every time I have to open ChatGPT just to rephrase one sentence. By the time I've copy-pasted back and forth, I've completely lost my train of thought." - r/productivity user, 2024
+> "Tax time is a nightmare because my receipts are scattered everywhere. I spend hours digging through email and still miss stuff." - r/freelance user, 2024
 
 Example of BAD quote:
 > "It would be nice if there was an easier way to do this" - unknown source

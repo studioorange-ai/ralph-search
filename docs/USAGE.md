@@ -187,10 +187,10 @@ The validator agents in `agents/` can be edited to be more or less strict:
 ### Using helper tools
 ```bash
 # Search Reddit for pain quotes
-./tools/reddit-search.sh "chatgpt workflow annoying" "productivity"
+./tools/reddit-search.sh "receipt tracking is a mess" "freelance"
 
 # Generate competitor search queries
-./tools/competitor-finder.sh "AI text rewriter"
+./tools/competitor-finder.sh "receipt tracker app"
 
 # Check validation status
 ./tools/validation-checker.sh projects/my-app/checkpoints/phase1-validation.md
@@ -251,7 +251,7 @@ Consider pivoting or exploring a different idea.
 
 ## Next Steps
 
-1. Start with the QuickRephrase example: `./orchestrator.sh projects/quickrephrase`
+1. Start with the ReceiptRally example: `./orchestrator.sh projects/receiptrally`
 2. Review the generated outputs to understand the format
 3. Create your first project with a real idea
 4. Iterate based on results

@@ -58,7 +58,7 @@ cat projects/your-project-name/deliverables/GO-NO-GO-DECISION.md
 
 **Or try the included example:**
 ```bash
-./orchestrator.sh projects/quickrephrase
+./orchestrator.sh projects/receiptrally
 ```
 
 ---
@@ -170,7 +170,7 @@ cat projects/idea3/deliverables/GO-NO-GO-DECISION.md
 - [`docs/GETTING-STARTED.md`](docs/GETTING-STARTED.md) - Complete walkthrough
 - [`docs/USAGE.md`](docs/USAGE.md) - Detailed usage guide
 - [`docs/PHASE-GUIDE.md`](docs/PHASE-GUIDE.md) - Research methodology
-- [`projects/quickrephrase/`](projects/quickrephrase/) - Worked example
+- [`projects/receiptrally/`](projects/receiptrally/) - Worked example
 
 ---
 

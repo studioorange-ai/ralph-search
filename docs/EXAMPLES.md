@@ -4,20 +4,20 @@ This document provides additional examples of how to use Ralph Search for differ
 
 ---
 
-## Example 1: QuickRephrase (included)
+## Example 1: ReceiptRally (included)
 
-**Type**: Mac productivity app (B2C)
-**Location**: `projects/quickrephrase/`
+**Type**: Freelancer utility app (B2C)
+**Location**: `projects/receiptrally/`
 
 This is the primary example included with Ralph Search. It demonstrates:
-- Detailed intake form for a developer-focused product
+- Detailed intake form for a freelancer-focused product
 - B2C pricing considerations (one-time vs. subscription)
-- GTM strategy for indie Mac apps
-- Community-based research (Reddit, Product Hunt)
+- GTM strategy timed around tax season
+- Community-based research (Reddit, Indie Hackers)
 
 **Run it:**
 ```bash
-./orchestrator.sh projects/quickrephrase
+./orchestrator.sh projects/receiptrally
 ```
 
 ---
@@ -247,4 +247,4 @@ cat projects/*/deliverables/GO-NO-GO-DECISION.md
 
 ---
 
-*The best way to learn is to try. Start with the QuickRephrase example, then adapt for your own ideas!*
+*The best way to learn is to try. Start with the ReceiptRally example, then adapt for your own ideas!*

@@ -34,10 +34,10 @@ cat projects/your-project-name/deliverables/GO-NO-GO-DECISION.md
 ```bash
 # Open Terminal
 cd ralph-search
-./orchestrator.sh projects/quickrephrase
+./orchestrator.sh projects/receiptrally
 
 # Wait 2-15 hours, then check the result
-cat projects/quickrephrase/deliverables/GO-NO-GO-DECISION.md
+cat projects/receiptrally/deliverables/GO-NO-GO-DECISION.md
 ```
 
 ---
@@ -347,12 +347,12 @@ Compare 2-3 ideas side by side:
 
 ## Example: Running the Included Demo
 
-The system comes with a complete example called "QuickRephrase" (an AI text transformation tool).
+The system comes with a complete example called "ReceiptRally" (a receipt capture tool for freelancers).
 
 ### Try it:
 ```bash
 cd ralph-search
-./orchestrator.sh projects/quickrephrase
+./orchestrator.sh projects/receiptrally
 ```
 
 ### What you'll see:
@@ -364,7 +364,7 @@ cd ralph-search
 
 ### Review the example intake:
 ```bash
-cat projects/quickrephrase/intake.md
+cat projects/receiptrally/intake.md
 ```
 
 This shows you how a well-filled-out intake form looks.
@@ -398,7 +398,7 @@ ralph-search/
 │   ├── PHASE-GUIDE.md        # Deep dive on each phase
 │   └── EXAMPLES.md           # More example projects
 └── projects/
-    └── quickrephrase/        # Example project
+    └── receiptrally/        # Example project
         ├── intake.md         # Filled-out intake form
         ├── research-prd.md   # Generated research plan
         ├── checkpoints/      # Validation reports go here
@@ -449,7 +449,7 @@ cat projects/my-idea/checkpoints/phase2-validation.md
 ## Need Help?
 
 1. **Read the docs**: `docs/USAGE.md` and `docs/PHASE-GUIDE.md` have more detail
-2. **Check the example**: `projects/quickrephrase/` shows a complete setup
+2. **Check the example**: `projects/receiptrally/` shows a complete setup
 3. **Review validation reports**: They explain exactly why things passed or failed
 
 ---

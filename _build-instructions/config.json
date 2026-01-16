@@ -53,9 +53,9 @@
       "estimated_time": "30 minutes",
       "dependencies": [2, 4],
       "deliverables": [
-        "projects/quickrephrase/intake.md",
-        "projects/quickrephrase/research-prd.md",
-        "Complete folder structure for QuickRephrase"
+        "projects/receiptrally/intake.md",
+        "projects/receiptrally/research-prd.md",
+        "Complete folder structure for ReceiptRally"
       ]
     },
     {
@@ -88,7 +88,7 @@
     "content_quality": "templates_have_full_content_not_placeholders"
   },
   "success_criteria": [
-    "Can execute: ./orchestrator.sh projects/quickrephrase",
+    "Can execute: ./orchestrator.sh projects/receiptrally",
     "Produces valid GO/NO-GO decision",
     "All 7 phases pass validation",
     "Documentation is clear for new users"

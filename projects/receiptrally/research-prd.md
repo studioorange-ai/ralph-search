@@ -1,11 +1,11 @@
-# Market Research PRD: QuickRephrase
+# Market Research PRD: ReceiptRally
 
 *Auto-generated from intake form on 2026-01-14*
 
 ## Research Mission
-**Problem**: Flow-breaking workflow when rephrasing text - current process requires 11 steps and 2-3 minutes of app switching between writing context and ChatGPT
-**Target Avatar**: Mac users who write content daily - developers, founders, content creators, and marketers who care about how their writing sounds
-**Expected Market**: $50-100M TAM (Mac productivity tools market)
+**Problem**: Receipt capture and reconciliation is messy for freelancers and small agencies. Receipts are scattered across email, downloads, screenshots, and paper. Month-end cleanup takes hours and missed deductions are common.
+**Target Avatar**: Freelancers, consultants, and small agencies on Mac who manage their own bookkeeping
+**Expected Market**: $100-200M TAM (freelancers + small agencies doing their own expense tracking)
 **Research Budget**: 15 hours, $50 dollars
 
 ## Phase Execution Rules
@@ -24,25 +24,25 @@
 **Validator Agent**: market-validator.md
 
 ### Research Tasks
-- [ ] 1.1: Find 10 direct competitors (AI writing assistants, text transformation tools)
-- [ ] 1.2: Find 10 indirect competitors (TextExpander, Alfred, Grammarly, clipboard managers)
+- [ ] 1.1: Find 10 direct competitors (receipt scanning and expense tracking tools)
+- [ ] 1.2: Find 10 indirect competitors (spreadsheets, accounting suites, scanner apps)
 - [ ] 1.3: Scrape pricing from all competitor websites
 - [ ] 1.4: Estimate competitor scale (funding, employees, traffic)
-- [ ] 1.5: Calculate TAM using bottoms-up approach (# Mac power users x avg price)
-- [ ] 1.6: Identify market growth rate (AI writing tools trend 2023-2026)
+- [ ] 1.5: Calculate TAM using bottoms-up approach (# freelancers x % self-managed bookkeeping x avg price)
+- [ ] 1.6: Identify market growth rate (freelancer economy + expense tracking tools)
 
 ### Data Collection Methods
-- **Competitors**: Search "AI text rewriter Mac", "text transformation tool", "writing assistant macOS", Product Hunt, G2, Capterra
-- **Pricing**: Scrape /pricing pages, App Store listings, create pricing-data.json
-- **Scale**: Use LinkedIn company pages, Crunchbase (free tier), App Store review counts
-- **TAM**: (# Mac users in US ~100M) x (% power users ~10%) x (% who write daily ~20%) x (avg price $35)
-- **Growth**: Google Trends for "AI writing assistant", VC funding in writing tools
+- **Competitors**: Search "receipt scanner app", "expense tracking for freelancers", "receipt management macOS", Product Hunt, G2, Capterra
+- **Pricing**: Scrape /pricing pages for Expensify, Dext, Shoeboxed, SparkReceipt, Zoho Expense, FreshBooks
+- **Scale**: LinkedIn company pages, Crunchbase (free tier), App Store review counts
+- **TAM**: (US freelancers ~70M) x (% who self-manage expenses ~30%) x (avg price $50)
+- **Growth**: Google Trends for "receipt scanner" and "expense tracking", freelancer market reports
 
 ### Validation Criteria (Must pass ALL)
 - [ ] Found 5+ competitors with public pricing (proves market exists)
-- [ ] TAM > $10M/year (big enough to pursue)
-- [ ] Market growing or stable (AI writing tools growing rapidly)
-- [ ] Can identify where target avatar congregates online (r/MacApps, r/productivity, etc.)
+- [ ] TAM > $20M/year (big enough to pursue)
+- [ ] Market growing or stable (freelancer economy expanding)
+- [ ] Can identify where target avatar congregates online (r/freelance, r/smallbusiness, etc.)
 
 ### Output Files
 - `research/phase1/competitor-matrix.md` (20 competitors with data)
@@ -52,14 +52,14 @@
 - `checkpoints/phase1-validation.md` (PASS/FAIL + reasoning)
 
 ### If FAIL - Remediation Strategies
-- **No competitors found**: Search "text rewriter", "paraphrasing tool", "writing assistant"
-- **TAM too small**: Include Windows market, or target enterprise users
-- **Market shrinking**: Check if ChatGPT is making standalone tools obsolete
+- **No competitors found**: Search "receipt organizer", "expense report tool", "receipt OCR"
+- **TAM too small**: Expand to small businesses or include Windows users
+- **Market shrinking**: Check if full accounting suites are absorbing demand
 
 ### STOP Criteria
 - Can't find ANY competitors (no market validation)
-- TAM < $5M (too small even after adjustments)
-- Market declining >20%/year (ChatGPT eating everything)
+- TAM < $10M (too small even after adjustments)
+- Market declining >20%/year
 
 ---
 
@@ -70,27 +70,27 @@
 **Validator Agent**: avatar-validator.md
 
 ### Research Tasks
-- [ ] 2.1: Identify 5-10 communities where avatar hangs out (r/productivity, r/MacApps, r/SideProject, Indie Hackers, Twitter)
-- [ ] 2.2: Scrape top 500 posts/comments about text rephrasing, writing workflow, ChatGPT friction
+- [ ] 2.1: Identify 5-10 communities where avatar hangs out (r/freelance, r/smallbusiness, r/accounting, Indie Hackers)
+- [ ] 2.2: Scrape top 500 posts/comments about receipts, expense tracking, tax prep, bookkeeping
 - [ ] 2.3: Extract verbatim pain quotes (50+ quotes minimum)
-- [ ] 2.4: Cluster pain themes (what hurts most? - flow breaking, time waste, quality, etc.)
-- [ ] 2.5: Identify current workarounds (ChatGPT tab, Alfred workflows, TextExpander hacks)
-- [ ] 2.6: Calculate pain frequency (daily/weekly/monthly)
-- [ ] 2.7: Estimate economic cost of pain (time x hourly rate)
+- [ ] 2.4: Cluster pain themes (time waste, missing receipts, audit anxiety, data entry)
+- [ ] 2.5: Identify current workarounds (spreadsheets, folders, accounting suites)
+- [ ] 2.6: Calculate pain frequency (monthly/quarterly)
+- [ ] 2.7: Estimate economic cost of pain (time x hourly rate + missed deductions)
 
 ### Data Collection Methods
-- **Communities**: r/productivity (3M), r/MacApps (185K), r/SideProject (220K), Indie Hackers, Twitter #MacProductivity
-- **Reddit**: Search "ChatGPT copy paste annoying", "text rewriter workflow", "AI writing frustrating"
-- **Twitter**: Search "chatgpt workflow broken", "wish ai could", "hate switching tabs"
-- **Clustering**: Group complaints into themes: speed, flow, quality, integration
-- **Economic cost**: (5-10 times/day) x (2-3 min) x ($100/hr) = $2-5/day = $500-1000/year
+- **Communities**: r/freelance, r/smallbusiness, r/accounting, r/Entrepreneur, Indie Hackers
+- **Reddit**: Search "receipt tracking", "expense report", "tax season receipts", "bookkeeping pain"
+- **Twitter/X**: Search "where are my receipts", "expense tracking is a mess"
+- **Clustering**: Group complaints into themes: time, accuracy, stress, compliance
+- **Economic cost**: (2-4 hrs/month) x ($75/hr) + missed deductions ($200-1000/year)
 
 ### Validation Criteria (Must pass ALL)
 - [ ] Found 50+ verbatim quotes articulating the problem
 - [ ] 3+ distinct pain themes emerged (proves multifaceted problem)
 - [ ] Avatar uses workarounds (proves willingness to solve)
-- [ ] Pain occurs weekly or more frequently (proves urgency)
-- [ ] Economic cost > $100/year (proves worth paying for)
+- [ ] Pain occurs monthly or more frequently (proves urgency)
+- [ ] Economic cost > $200/year (proves worth paying for)
 
 ### Output Files
 - `research/phase2/communities.md` (where avatar exists, with member counts and links)
@@ -101,64 +101,64 @@
 - `checkpoints/phase2-validation.md` (PASS/FAIL + reasoning)
 
 ### If FAIL - Remediation Strategies
-- **<50 quotes**: Search different keywords ("rewrite text", "paraphrase", "writing tool")
-- **No workarounds**: Check if people just use ChatGPT and don't complain (bad sign)
-- **Low frequency**: Target power users only (writers, marketers)
-- **Low cost**: Target higher-earning professionals ($200/hr+)
+- **<50 quotes**: Search different keywords ("receipt organization", "expense tracking")
+- **No workarounds**: Check if people pay accountants or ignore receipts (bad sign)
+- **Low frequency**: Focus on high-expense freelancers (consultants, agencies)
+- **Low cost**: Emphasize missed deductions + audit risk
 
 ### STOP Criteria
-- <20 quotes found after remediation (problem may not be real outside of founder's head)
+- <20 quotes found after remediation (problem may not be real)
 - No workarounds found (people don't care enough)
-- Monthly or less frequency (not urgent)
-- Cost <$50/year (won't support $35+ pricing)
+- Quarterly or less frequency (not urgent)
+- Cost <$100/year (won't support $39+ pricing)
 
 ---
 
 ## PHASE 3: Competitive Differentiation Analysis
-**Objective**: Find the unique angle that makes avatar choose QuickRephrase
+**Objective**: Find the unique angle that makes avatar choose ReceiptRally
 **Time Budget**: 3 hours
 **Cost Budget**: $10 (competitor research tools)
 **Validator Agent**: market-validator.md + avatar-validator.md
 
 ### Research Tasks
-- [ ] 3.1: Build comprehensive feature matrix (QuickRephrase vs. top 5 competitors)
+- [ ] 3.1: Build comprehensive feature matrix (ReceiptRally vs. top 5 competitors)
 - [ ] 3.2: Scrape competitor reviews (App Store, G2, Capterra, Trustpilot)
-- [ ] 3.3: Identify gaps: what are they NOT solving? (integration at point of writing?)
+- [ ] 3.3: Identify gaps: what are they NOT solving? (lightweight local-first workflows?)
 - [ ] 3.4: Analyze negative reviews: what do users hate about current solutions?
-- [ ] 3.5: Map QuickRephrase's unique mechanism (context menu AI) vs. their approach
-- [ ] 3.6: Calculate "10x better" dimension (speed? integration? simplicity?)
-- [ ] 3.7: Assess copyability (can TextExpander/Alfred add this in 6 months?)
+- [ ] 3.5: Map ReceiptRally's unique mechanism (auto-capture + local OCR) vs. their approach
+- [ ] 3.6: Calculate "10x better" dimension (time-to-reconcile, setup time)
+- [ ] 3.7: Assess copyability (can incumbents ship local-first quickly?)
 
 ### Data Collection Methods
-- **Features**: Scrape product pages for Grammarly, TextExpander, Quillbot, Wordtune, WriteSonic
-- **Reviews**: App Store reviews for Grammarly Mac, TextExpander; G2 for Quillbot
+- **Features**: Scrape product pages for Expensify, Dext, Shoeboxed, Zoho Expense, FreshBooks
+- **Reviews**: App Store reviews for receipt apps; G2 reviews for expense platforms
 - **Gaps**: Compare feature matrix to Phase 2 pain themes
-- **Sentiment**: Identify common complaints ("slow", "requires browser", "breaks workflow")
-- **Unique mechanism**: "AI transformation without leaving current app" = key differentiator
+- **Sentiment**: Identify common complaints ("too expensive", "too much setup", "privacy")
+- **Unique mechanism**: "Auto-capture receipts from email/Downloads with local OCR" = key differentiator
 
 ### Validation Criteria (Must pass 3 of 4)
-- [ ] ONE dimension where QuickRephrase is 10x better (speed: 5 sec vs 2 min = 24x)
+- [ ] ONE dimension where ReceiptRally is 10x better (reconcile in 10 min vs 2-4 hrs)
 - [ ] Gap maps to HIGH-INTENSITY pain theme from Phase 2
-- [ ] 20+ reviews complaining about gap we solve ("hate switching apps", "breaks flow")
-- [ ] Unique mechanism defensible for 12+ months (first-mover, macOS-specific integration hard to replicate)
+- [ ] 20+ reviews complaining about gap we solve ("too much setup", "subscription fatigue")
+- [ ] Unique mechanism defensible for 12+ months (local-first, Mac-specific)
 
 ### Output Files
 - `research/phase3/feature-matrix.md` (comprehensive comparison table)
 - `research/phase3/review-analysis.md` (themes from 200+ reviews)
 - `research/phase3/gaps-identified.md` (what's missing in market)
-- `research/phase3/positioning-statement.md` (QuickRephrase's unique angle)
+- `research/phase3/positioning-statement.md` (ReceiptRally's unique angle)
 - `research/phase3/defensibility-analysis.md` (how easily can they copy?)
 - `checkpoints/phase3-validation.md` (PASS/FAIL + reasoning)
 
 ### If FAIL - Remediation Strategies
-- **No 10x dimension**: Focus on niche (Mac-only, developers-only)
-- **Gap is low-priority pain**: Reposition around different pain theme
-- **Easy to copy**: Move faster - launch within 2 weeks, build audience
+- **No 10x dimension**: Focus on a niche (consultants, agencies, contractors)
+- **Gap is low-priority pain**: Reposition around audit readiness or missed deductions
+- **Easy to copy**: Lean into privacy + one-time pricing
 - **Already solved**: Check if we missed a competitor
 
 ### STOP Criteria
-- No 10x dimension after remediation (we're just another AI writer)
-- TextExpander/Alfred already shipping AI features (too late)
+- No 10x dimension after remediation (just another expense tracker)
+- Incumbents already offer local-first, lightweight workflows
 - Gap doesn't map to high-priority pain
 
 ---
@@ -171,28 +171,28 @@
 
 ### Research Tasks
 - [ ] 4.1: Analyze competitor pricing (from Phase 1)
-- [ ] 4.2: Calculate avatar's current cost of problem (from Phase 2: ~$500-1000/year)
-- [ ] 4.3: Determine pricing ceiling (max they'd pay: ~$150-300/year value / 3 = $50-100)
-- [ ] 4.4: Determine pricing floor (min to be credible: $20+)
-- [ ] 4.5: Choose business model (one-time vs. subscription - research Mac user preferences)
-- [ ] 4.6: Model 3 scenarios: conservative ($29), realistic ($39), optimistic ($49)
+- [ ] 4.2: Calculate avatar's current cost of problem (time + missed deductions)
+- [ ] 4.3: Determine pricing ceiling (max they'd pay: cost / 3)
+- [ ] 4.4: Determine pricing floor (min to be credible: $29+)
+- [ ] 4.5: Choose business model (one-time vs. subscription)
+- [ ] 4.6: Model 3 scenarios: conservative ($39), realistic ($49), optimistic ($69)
 - [ ] 4.7: Calculate LTV for each scenario
-- [ ] 4.8: Estimate CAC per channel (Reddit: ~$5, Product Hunt: ~$10, Paid: ~$50)
+- [ ] 4.8: Estimate CAC per channel (Reddit, Product Hunt, newsletters)
 - [ ] 4.9: Validate LTV:CAC > 3:1 for realistic scenario
 
 ### Data Collection Methods
-- **Ceiling**: $500-1000/year cost / 3 = $165-333/year max capture
-- **Floor**: Comparable apps (PopClip $15, Alfred Powerpack $34, Raycast Pro $8/mo)
+- **Ceiling**: $2,400/year time cost / 3 = $800/year max capture
+- **Floor**: Comparable tools ($5-20/mo subscriptions, $39-79 one-time utilities)
 - **LTV**:
-  - One-time at $39: LTV = $39 (no recurring, but also no churn)
-  - Subscription at $8/mo: LTV = $8 x 12 x 2 years = $192 (but harder sell on Mac)
-- **CAC**: Organic (Reddit, Product Hunt) ~$5-10, Paid ~$50-100
+  - One-time at $49: LTV = $49
+  - Subscription at $6/mo: LTV = $6 x 12 x 2 years = $144
+- **CAC**: Organic (Reddit, Indie Hackers) ~$5-15, Paid ~$50-100
 
 ### Validation Criteria (Must pass ALL)
-- [ ] Pricing is <30% of avatar's cost of problem ($500 x 30% = $150 - we're at $39, good)
-- [ ] LTV:CAC ratio > 3:1 in realistic scenario ($39 / $10 = 3.9x for organic)
-- [ ] Business model matches avatar buying psychology (Mac users prefer one-time for utilities)
-- [ ] Gross margin > 70% at scale (API costs ~$0.01/transform, hosting minimal)
+- [ ] Pricing is <30% of avatar's cost of problem ($2,400 x 30% = $720 - we're at $49)
+- [ ] LTV:CAC ratio > 3:1 in realistic scenario ($49 / $12 = 4.1x for organic)
+- [ ] Business model matches avatar buying psychology (freelancers prefer one-time tools)
+- [ ] Gross margin > 70% at scale (OCR costs minimal, local-first)
 
 ### Output Files
 - `research/phase4/pricing-analysis.md` (competitive benchmarks)
@@ -202,14 +202,14 @@
 - `checkpoints/phase4-validation.md` (PASS/FAIL + reasoning)
 
 ### If FAIL - Remediation Strategies
-- **ROI unclear**: Lower price to $29 (clearer impulse buy)
+- **ROI unclear**: Lower price to $39 (clearer impulse buy)
 - **LTV:CAC < 3:1**: Focus exclusively on organic channels
-- **Model mismatch**: Test both one-time and subscription with landing page
-- **Low margin**: Use cheaper AI model (GPT-3.5 vs GPT-4) for basic transforms
+- **Model mismatch**: Test one-time vs subscription with landing page
+- **Low margin**: Use on-device OCR, avoid API costs
 
 ### STOP Criteria
 - LTV:CAC < 2:1 (can't make economics work organically)
-- Margin < 50% (API costs too high)
+- Margin < 50% (costs too high)
 - No clear ROI for avatar
 
 ---
@@ -222,31 +222,31 @@
 
 ### Research Tasks
 - [ ] 5.1: List ALL communities where avatar exists (from Phase 2)
-- [ ] 5.2: Analyze successful Mac app launches in those communities (what worked?)
+- [ ] 5.2: Analyze successful bookkeeping or freelancer tool launches in those communities
 - [ ] 5.3: Estimate organic reach per channel
 - [ ] 5.4: Estimate CAC per channel (organic + paid)
-- [ ] 5.5: Identify content strategy (demo videos, "how I use AI to write" threads)
-- [ ] 5.6: Map partnership/integration opportunities (Raycast extension? Alfred workflow?)
-- [ ] 5.7: Design launch sequence (beta -> Product Hunt -> sustained content)
+- [ ] 5.5: Identify content strategy (tax season checklists, "receipt cleanup" demos)
+- [ ] 5.6: Map partnership/integration opportunities (accountants, QuickBooks, Wave)
+- [ ] 5.7: Design launch sequence (beta -> tax season -> ongoing content)
 - [ ] 5.8: Calculate path to first 100 customers
 
 ### Data Collection Methods
 - **Communities**:
-  - r/MacApps: 185K members, ~5% see top posts = 9K reach
-  - r/productivity: 3M members, ~1% see posts = 30K reach
-  - Product Hunt: Featured = 20-50K views
-  - Twitter #MacProductivity: Variable, depends on following
-- **Successful launches**: Search for Raycast, Arc, CleanShot launches - analyze tactics
+  - r/freelance: ~1.5M members
+  - r/smallbusiness: ~2M members
+  - Indie Hackers: ~200K members
+  - Accountant newsletters + YouTube channels
+- **Successful launches**: Search for bookkeeping tools and freelancer utilities on Product Hunt
 - **CAC estimates**:
-  - Reddit (organic): $0-5 per customer (high effort, low cost)
-  - Product Hunt: $5-15 per customer (one-shot but high volume)
-  - Twitter: $10-30 per customer (requires audience building)
-- **Partnerships**: Raycast extension store, SetApp, MacStories review
+  - Reddit (organic): $0-10 per customer
+  - Product Hunt: $5-20 per customer
+  - Newsletter sponsorships: $20-60 per customer
+- **Partnerships**: Accountant firms, bookkeeping services, tool marketplaces
 
 ### Validation Criteria (Must pass 3 of 4)
 - [ ] Identified 2+ channels with estimated CAC < $50
 - [ ] Can reach 1,000+ avatars organically within 30 days
-- [ ] Found 3+ recent successful launches to learn from (Raycast, CleanShot, Arc)
+- [ ] Found 3+ recent successful launches to learn from
 - [ ] Clear path to first 100 customers within 90 days
 
 ### Output Files
@@ -258,8 +258,8 @@
 - `checkpoints/phase5-validation.md` (PASS/FAIL + reasoning)
 
 ### If FAIL - Remediation Strategies
-- **CAC too high**: Focus on Product Hunt + Reddit only (highest ROI for indie)
-- **Can't reach avatar**: Consider influencer partnerships (Mac YouTube channels)
+- **CAC too high**: Focus on Product Hunt + Reddit only
+- **Can't reach avatar**: Consider accountant partnerships or tax season SEO
 - **No recent successes**: Study older launches, accept higher risk
 - **Path to 100 unclear**: Start with beta waitlist to validate interest first
 
@@ -290,7 +290,7 @@
 **Must-Haves (ALL must pass)**
 - Market exists (Phase 1 PASS)
 - Pain is real (Phase 2 PASS)
-- QuickRephrase is differentiated (Phase 3 PASS)
+- ReceiptRally is differentiated (Phase 3 PASS)
 - Economics work (Phase 4 PASS)
 - Can reach avatar (Phase 5 PASS)
 
@@ -369,4 +369,4 @@ When executing this PRD:
 7. Use verbatim quotes from research (critical for authenticity)
 8. Show your work (include sources, calculations, assumptions)
 
-Let's validate QuickRephrase!
+Let's validate ReceiptRally!
