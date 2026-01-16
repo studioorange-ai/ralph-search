@@ -1,0 +1,96 @@
+{
+  "project_name": "Market Research Engine",
+  "project_description": "Ralph-style autonomous market research system for product validation",
+  "prd_file": "build-mre-prd.md",
+  "output_directory": "../market-research-engine",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Create Folder Structure",
+      "estimated_time": "15 minutes",
+      "dependencies": [],
+      "deliverables": [
+        "Complete directory tree",
+        "All subdirectories created"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Create Core Templates",
+      "estimated_time": "30 minutes",
+      "dependencies": [1],
+      "deliverables": [
+        "project-intake-form.md",
+        "research-prd-template.md",
+        "validation-report-template.md"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Create Validator Agents",
+      "estimated_time": "45 minutes",
+      "dependencies": [2],
+      "deliverables": [
+        "market-validator.md",
+        "avatar-validator.md",
+        "pricing-validator.md",
+        "gtm-validator.md"
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Create Orchestrator Script",
+      "estimated_time": "60 minutes",
+      "dependencies": [2, 3],
+      "deliverables": [
+        "orchestrator.sh (executable)",
+        "Helper scripts in tools/"
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Create Example Project",
+      "estimated_time": "30 minutes",
+      "dependencies": [2, 4],
+      "deliverables": [
+        "projects/quickrephrase/intake.md",
+        "projects/quickrephrase/research-prd.md",
+        "Complete folder structure for QuickRephrase"
+      ]
+    },
+    {
+      "phase": 6,
+      "name": "Create Documentation",
+      "estimated_time": "45 minutes",
+      "dependencies": [1, 2, 3, 4, 5],
+      "deliverables": [
+        "README.md",
+        "docs/USAGE.md",
+        "docs/PHASE-GUIDE.md"
+      ]
+    },
+    {
+      "phase": 7,
+      "name": "Test the System",
+      "estimated_time": "30 minutes",
+      "dependencies": [1, 2, 3, 4, 5, 6],
+      "deliverables": [
+        "End-to-end test results",
+        "Bug fixes applied",
+        "System verified working"
+      ]
+    }
+  ],
+  "validation_rules": {
+    "phase_completion": "all_tasks_checked",
+    "file_creation": "files_exist_at_specified_paths",
+    "code_quality": "scripts_are_executable_and_error_free",
+    "content_quality": "templates_have_full_content_not_placeholders"
+  },
+  "success_criteria": [
+    "Can execute: ./orchestrator.sh projects/quickrephrase",
+    "Produces valid GO/NO-GO decision",
+    "All 7 phases pass validation",
+    "Documentation is clear for new users"
+  ]
+}

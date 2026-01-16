@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "research_settings": {
+    "max_time_hours": 15,
+    "max_cost_dollars": 50,
+    "auto_remediation_attempts": 2,
+    "stop_on_fail_threshold": "any_must_have"
+  },
+  "phase_settings": {
+    "pause_after_phase_1": false,
+    "pause_after_phase_2": false,
+    "pause_after_phase_3": false,
+    "pause_after_phase_4": false,
+    "pause_after_phase_5": false
+  },
+  "validation_settings": {
+    "require_all_criteria": true,
+    "borderline_threshold": 6.5,
+    "strong_pass_threshold": 8.0
+  },
+  "budget_tracking": {
+    "warn_at_percentage": 75,
+    "stop_at_percentage": 100,
+    "allow_budget_override": false
+  },
+  "output_settings": {
+    "generate_full_report": true,
+    "include_raw_data": true,
+    "verbatim_quotes_required": true
+  },
+  "_comments": {
+    "stop_on_fail_threshold": "Options: 'any_must_have' (stop if any must-have fails), 'all_phases' (stop if any phase fails), 'never' (continue regardless)",
+    "pause_after_phase_X": "Set to true to require human approval before proceeding to next phase",
+    "borderline_threshold": "Scores between this and strong_pass trigger NEEDS REVIEW",
+    "allow_budget_override": "If true, will prompt user to continue when budget exceeded instead of stopping"
+  }
+}
